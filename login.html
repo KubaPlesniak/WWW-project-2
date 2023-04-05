@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <section class="header" id="top">
+      <nav>
+        <a href="index.html"><img src="images/logo.jpg" alt="logo" /></a>
+        <div class="nav-links" id="navLinks">
+          <button class="nav-close" onclick="hideMenu()">Close</button>
+          <ul>
+            <li><a href="index.html">Strona startowa</a></li>
+            <li><a href="Tatry.html">Tatry</a></li>
+            <li><a href="Bieszczady.html">Bieszczady</a></li>
+            <li><a href="Sudety.html">Sudety</a></li>
+            <li><a href="login.html">Zaloguj</a></li>
+          </ul>
+        </div>
+        <button class="nav-open" id="openbutton" onclick="showMenu()">
+          Menu
+        </button>
+      </nav>
+
+      <div class="loginBox">
+        <h1>Login lub rejestracja</h1><br>
+        <form method="post" action="http://localhost:81/api/login">
+            <label for="email">Email:</label><br>
+            <input class="inputLogin" type="email" id="email" name="email"><br><br>
+            <label for="password">Hasło:</label><br>
+            <input class="inputLogin" type="password" id="password" name="password"><br><br>
+            <div class="buttonLogin">
+              <input class="submitLogin margin-m" type="submit" value="Zaloguj">
+              <span class="margin-m">lub</span>
+              <input class="submitLogin margin-m" type="submit" formaction="register.html" value="Zarejestruj">
+            </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- javascript -->
+
+    <script>
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+        openbutton.style.opacity = "0";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+        openbutton.style.opacity = "1";
+      }
+    </script>
+  </body>
+</html>

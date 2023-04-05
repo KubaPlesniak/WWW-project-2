@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />
+    <title>Polskie Góry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <section class="header" id="top">
+      <nav>
+        <a href="index.html"><img src="images/logo.jpg" alt="logo" /></a>
+        <div class="nav-links" id="navLinks">
+          <button class="nav-close" onclick="hideMenu()">Close</button>
+          <ul>
+            <li><a href="index_logged_in.html">Strona startowa</a></li>
+            <li><a href="Tatry_logged_in.html">Tatry</a></li>
+            <li><a href="Bieszczady_logged_in.html">Bieszczady</a></li>
+            <li><a href="Sudety_logged_in.html">Sudety</a></li>
+            <li><a href="contact.html">Formularz</a></li>
+            <li><a href="index.html">Wyloguj</a></li>
+          </ul>
+        </div>
+        <button class="nav-open" id="openbutton" onclick="showMenu()">
+          Menu
+        </button>
+      </nav>
+
+      <div class="text-box">
+        <h1>Polskie Góry</h1>
+        <p>Witaj</p>
+        <a href="#mainContent" class="main-link">Kliknij, aby przejść niżej</a>
+      </div>
+    </section>
+
+    <section class="course" id="mainContent">
+      <h3>Co daje dobrze spędzony czas w górach?</h3>
+
+      <div class="row">
+        <div class="col">
+          <h3>Piękne widoki</h3>
+          <p>
+            Kiedy wspinasz się na góry Polskie, możesz cieszyć się cudowną scenerią
+            uroków natury. Zobacz niesamowity obraz Polskich krajobrazów przed sobą!
+          </p>
+        </div>
+        <div class="col">
+          <h3>Korzyści zdrowotne</h3>
+          <p>
+            Chodzenie to doskonała forma ćwiczeń. Popraw swoją siłę, zdrowie układu krążenia
+            i skład ciała chodząc po górach!
+          </p>
+        </div>
+        <div class="col">
+          <h3>Znajomi</h3>
+          <p>
+            Dlaczego nie chodzić z przyjaciółmi? Możesz razem świetnie się bawić, cieszyć się górami i jednocześnie zacieśnić przyjaźnie!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- mountains -->
+
+    <section class="mountains">
+      <h1>Korzyści z chodzenia w górach</h1>
+      
+      <div class="row">
+        <div class="mountainColumn">
+          <img src="images\view.jpg" alt="image of mountain" />
+          <div class="layer">
+            <h3>Krajobraz</h3>
+          </div>
+        </div>
+        <div class="mountainColumn">
+          <img src="images\health.jpg" alt="image of mountain" />
+          <div class="layer">
+            <h3>Zdrowie</h3>
+          </div>
+        </div>
+        <div class="mountainColumn">
+          <img src="images\friend.jpg" alt="image of mountain" />
+          <div class="layer">
+            <h3>Znajomi</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gory -->
+
+    <section class="gory">
+      <h1>Trzy przykładowe pasma Polskich gór</h1>
+      <div class="row">
+        <div class="goryColumn">
+          <a href="Tatry.html"><img src="images\tatry1.jpg" alt="image of mountain" /></a>
+            <h3>Tatry</h3>
+        </div>
+        <div class="goryColumn">
+          <a href="Bieszczady.html"><img src="images\bieszczady1.jpg" alt="image of mountain" /></a>
+            <h3>Bieszczady</h3>
+        </div>
+        <div class="goryColumn">
+          <a href="Sudety.html"><img src="images\sudety1.jpg" alt="image of mountain" /></a>
+            <h3>Sudety</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Powrót do początku strony -->
+
+    <section class="cta">
+      <h1>Polskie Góry</h1>
+      <a href="#top" class="main-link">Powrót na początek</a>
+    </section>
+
+    </section>
+
+    <!-- javascript -->
+
+    <script>
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+        openbutton.style.opacity = "0";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+        openbutton.style.opacity = "1";
+      }
+    </script>
+  </body>
+</html>
